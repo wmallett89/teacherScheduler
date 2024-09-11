@@ -1,0 +1,5 @@
+package: stub
+generate:
+  - server
+  - spec
+output: ../../stub/server.gen.go

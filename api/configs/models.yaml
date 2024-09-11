@@ -1,0 +1,4 @@
+package: stub
+generate:
+  - types
+output: ../../stub/models.gen.go

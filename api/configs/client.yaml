@@ -1,0 +1,4 @@
+package: stub
+generate:
+  - client
+output: ../../stub/client.gen.go

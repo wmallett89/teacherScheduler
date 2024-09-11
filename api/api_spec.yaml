@@ -1,0 +1,67 @@
+openapi: "3.0.0"
+info:
+  version: 1.0.0
+  title: Teacher Scheduler
+  description: API to teachers and their schedules
+  contact:
+    name: Ben Mallett, Wes Mallett
+servers:
+  - url: /v1/scheduler/
+tags:
+  - name: teach-scheduler
+    description: API to teachers and their schedules
+
+paths:
+  /teachers:
+    get:
+      summary: Get all teachers
+      description: get all teachers
+      operationId: GetAllTeachers
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TeachersList'
+
+  /subjects:
+    get:
+      summary: Get all subjects
+      description: get all subjects
+      operationId: GetAllSubjects
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SubjectList'
+components:
+  schemas:
+    TeachersList:
+      type: array
+      items:
+        $ref: '#/components/schemas/Teacher'
+
+    Teacher:
+      type: object
+      properties:
+        firstName:
+          description: teacher's first name
+          type: string
+        lastName:
+          description: teacher's last name
+          type: string
+    SubjectList:
+      type: array
+      items:
+        $ref: '#/components/schemas/Subject'
+
+    Subject:
+      type: object
+      properties:
+        name:
+          description: name of the subject
+          type: string
+
