@@ -1,0 +1,10 @@
+logLevel: "DEBUG"
+server:
+  port: 443
+db:
+  name: ""
+  host: ""
+  username: ""
+  password: ""
+  port: ""
+  logLevel: ""
