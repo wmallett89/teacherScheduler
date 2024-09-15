@@ -13,7 +13,7 @@ func NewSchedulerHandler() *SchedulerHandler {
 }
 
 func (s SchedulerHandler) GetAllSubjects(ctx echo.Context) error {
-	return echo.NewHTTPError(http.StatusNotImplemented, "Not Implemented")
+	return echo.NewHTTPError(http.StatusOK, "Not Implemented")
 }
 
 func (s SchedulerHandler) GetAllTeachers(ctx echo.Context) error {
